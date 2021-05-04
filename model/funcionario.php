@@ -73,7 +73,7 @@
       }
     }
 
-    public function validar($login, $senha){
+    public function validate($login, $senha){
       try{
         $sql = "SELECT * FROM funcionario WHERE login = :login AND senha = :senha";
         $stmt = $this -> conn -> prepare($sql);

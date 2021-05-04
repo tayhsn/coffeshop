@@ -2,11 +2,11 @@
   require_once'../model/funcionario.php';
   $objFunc = new Funcionario();
 
-  if(isset($_POST['validar'])){
+  if(isset($_POST['validate'])){
     $login = $_POST['txtLogin'];
     $senha = $_POST['txtSenha'];
 
-    if($objFunc -> validar($login, $senha)){
+    if($objFunc -> validate($login, $senha)){
       $objFunc -> redirect('../venda.php');
     } else {
       $objFunc -> redirect('../index.php');

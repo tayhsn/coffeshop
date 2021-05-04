@@ -65,7 +65,7 @@
             <!-- Modal body -->
             <div class="modal-body">
               <form action="control/ctr-funcionario.php" method="POST">
-                <input type="hidden" name="validar">
+                <input type="hidden" name="validate">
                 <div class="d-flex flex-column p-2 bd-highlight justify-content-around align-items-center" >
                     <div>
                         <img src="images/logos/logotipo.png" alt="logo Cafézin" class="logoADM">
