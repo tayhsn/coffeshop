@@ -1,4 +1,4 @@
-<h1 align="center">​ Cafézin™️ :coffee: </h1>
+<h1 align="center">​ Cafézin™ :coffee: </h1>
 
 <div align="left"> 
     <h4>
@@ -8,7 +8,7 @@
         <strong>Cafézin</strong> é uma cafeteria fictícia, tema de um site desenvolvido com <strong>Frontend { HTML, CSS, BOOTSTRAP }, Backend { PHP }, e integração ao banco de dados { mySQL }</strong> submetido para avaliação no Projeto Final de Programação WEB do curso Desenvolvimento de Sistemas @ SENAI/BA.
     </h4>
     <h4>
-        Nota das avaliações:
+        ✔ Nota das avaliações:
         <ul>
             <li>
                 Frontend: <strong> 4/4 </strong>
@@ -30,7 +30,7 @@
     </ul>
     </h4>
     <h5 align="center">
-	Cafezin©. <br>
+	Cafézin©. <br>
 	Todos os Direitos Fictícios. <br>
 	Programação WEB 2021.1
 	</h5>
