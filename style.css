@@ -45,6 +45,41 @@ main img {
 
 /* PRODUTOS */
 
+.bebidas {
+  display: flex;
+  border: #bf8845 2px solid;
+  padding: 10px;
+  margin: 5px;
+}
+
+.bebidas img {
+  width: 50%;
+}
+
+.bebidas .infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bebidas .infos select {
+  width: fit-content;
+  margin: 5px;
+}
+
+.carrinho {
+  border: #13261f 2px solid;
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+}
+
+.carrinho p {
+  width: 100%;
+  align-items: center;
+  margin: 10px;
+}
 /* SECTION PAGINA INICIAL */
 
 section .pag-inicial {
