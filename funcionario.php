@@ -31,7 +31,7 @@
 <body>
       <!-- NAVEGAÇÃO -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
-        <a class="navbar-brand" href="#home"><img src="images/logos/header.gif" class="logoHeader"></a>
+        <a class="navbar-brand" href="index.php"><img src="images/logos/header.gif" class="logoHeader"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,6 +42,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link " href="cliente.php">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="produto.php">Produtos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="venda.php">Vendas</a>
