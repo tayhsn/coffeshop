@@ -37,7 +37,7 @@
 
     public function update($nome, $valor, $descricao, $id) {
       try {
-        $sql = " UPDATE cliente 
+        $sql = " UPDATE produto 
                  SET nome = :nome, valor = :valor, descricao = :descricao 
                  WHERE id = :id ";
         $stmt = $this -> conn -> prepare($sql);
@@ -58,7 +58,7 @@
 
     public function delete($id) {
       try {
-        $sql = " DELETE FROM cliente WHERE id = :id ";
+        $sql = " DELETE FROM produto WHERE id = :id ";
         $stmt = $this -> conn -> prepare($sql);
         $stmt -> bindParam(":id", $id);
 
