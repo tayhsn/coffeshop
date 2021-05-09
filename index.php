@@ -1,3 +1,8 @@
+<?php 
+  require_once 'model/venda.php';
+  $objVenda = new Venda();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,74 +105,143 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-              <div class="bebidas cafe-preto">
-                    <img src="./images/localpic/cafe-preto.jpg" alt="Café Preto">
-                    <div class="infos">
-                        <strong>Cafézin Preto</strong>
-                        <select class="form-select">
-                          <option>Tamanho:</option>
-                          <option value="P">200ml</option>
-                          <option value="M">300ml</option>
-                          <option value="G">500ml</option>
-                        </select>
-                        <select class="form-select">
-                          <option>Quantidade:</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                        <button id="submit" class="btn btn-dark">Escolher</button>
+              <forms action="control/ctr-venda.php" method="POST">
+                    <input type="hidden" name="getTotal">
+                    <div class="bebidas cafe-preto">
+                        <img src="./images/localpic/cafe-preto.jpg" alt="Café Preto">
+                      <div class="infos">
+                          <strong>Cafézin Preto</strong>
+                          <select class="form-select">
+                            <option>Tamanho:</option>
+                            <option value="P">200ml</option>
+                            <option value="M">300ml</option>
+                            <option value="G">500ml</option>
+                          </select>
+                          <select class="form-select">
+                            <option>Quantidade:</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                          <button id="submit" class="btn btn-dark">Escolher</button>
+                      </div>
                     </div>
-              </div>
-              <div class="bebidas cafe-expresso">
-                    <img src="./images/localpic/cafe-expresso.jpg" alt="Café Preto">
-                    <div class="infos">
-                        <strong>Cafézin Expresso</strong>
-                        <select class="form-select">
-                          <option>Tamanho:</option>
-                          <option value="P">200ml</option>
-                          <option value="M">300ml</option>
-                          <option value="G">500ml</option>
-                        </select>
-                        <select class="form-select">
-                          <option>Quantidade:</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                        <button id="submit" class="btn btn-dark">Escolher</button>
+                    <div class="bebidas cafe-expresso">
+                       <img src="./images/localpic/cafe-expresso.jpg" alt="Café Preto">
+                      <div class="infos">
+                          <strong>Cafézin Expresso</strong>
+                          <select class="form-select">
+                            <option>Tamanho:</option>
+                            <option value="P">200ml</option>
+                            <option value="M">300ml</option>
+                            <option value="G">500ml</option>
+                          </select>
+                          <select class="form-select">
+                            <option>Quantidade:</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                          <button id="submit" class="btn btn-dark">Escolher</button>
+                      </div>
                     </div>
-              </div>
-              <div class="bebidas cappucino">
-                    <img src="./images/localpic/cappucino.jpg" alt="Café Preto">
-                    <div class="infos">
-                        <strong>Cafézin Gourmet</strong>
-                        <select class="form-select">
-                          <option>Tamanho:</option>
-                          <option value="P">200ml</option>
-                          <option value="M">300ml</option>
-                          <option value="G">500ml</option>
-                        </select>
-                        <select class="form-select">
-                          <option>Quantidade:</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                        <button id="submit" class="btn btn-dark">Escolher</button>
+                    <div class="bebidas cappucino">
+                          <img src="./images/localpic/cappucino.jpg" alt="Café Preto">
+                        <div class="infos">
+                            <strong>Cafézin Gourmet</strong>
+                            <select class="form-select">
+                              <option>Tamanho:</option>
+                              <option value="P">200ml</option>
+                              <option value="M">300ml</option>
+                              <option value="G">500ml</option>
+                            </select>
+                            <select class="form-select">
+                              <option>Quantidade:</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                            </select>
+                            <button id="submit" class="btn btn-dark">Escolher</button>
+                        </div>
                     </div>
+              <div>
+                <button id="submit" class="btn btn-success" 
+                        data-toggle="modal" data-target="#myModalCLIENTE" data-dismiss="modal"
+                        > FINALIZAR PEDIDO </button>
               </div>
-              <div class="carrinho">
-                    <h3>Carrinho:</h3>
-                    <p id="total-items">Items:</p>
-                    <p id="valor-pagar">Valor:</p>
-              </div>
-            </div>
+
+            </forms>
+          </div>
 
           </div>
         </div>
       </div>
 
+      <!-- The CLIENTE Modal -->
+      <div class="modal fade" id="myModalCLIENTE">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Informe seus dados</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form action="control/ctr-venda.php" method="POST">
+                <input type="hidden" name="cliente">
+                <div class="d-flex flex-column p-2 bd-highlight justify-content-around align-items-center" >
+                    <div class="form-floating mb-3 d-flex">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Seu Nome" name="txtNome">
+                        <label for="floatingInput">NOME</label>
+                    </div>
+                    <div class="form-floating d-flex">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" name="txtCPF">
+                      <label for="floatingPassword">CPF</label>
+                    </div> <br>
+                    <button type="submit" class="btn btn-success"
+                    data-toggle="modal" data-target="#myModalPEDIDO" data-dismiss="modal"
+                    >FINALIZAR</button>
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+        
+       
+       <!-- The PEDIDO Modal -->
+       <div class="modal" id="myModalPEDIDO">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header bg-dark">
+              <h4 class="modal-title" style="color:white;">SEU PEDIDO:</h4>
+              <button style="color:white;" type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form action="control/ctr-venda.php" method="POST">
+                    <input type="hidden" name="showTotal">
+                    <div class="form-group">
+                      <label for="">Valor total a pagar:</label>
+                      <input type="text" class="form-control" name="txtTotal" id="recebe-total" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Código para retirada:</label>
+                      <input type="text" class="form-control" name="txtID" id="recebe-id" readonly>
+                    </div>
+                </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
       
       <!-- IMAGENS MAIN -->
      <main id="home">
@@ -223,6 +297,23 @@
           </div>
       </div>
      </footer>
+
+   
+
+    <script>
+      $('#myModalPEDIDO').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget);
+        var recebeID = button.data('id');
+        var recebeTotal = button.data('total');
+      
+
+        var modal = $(this);
+        modal.find('#recebe-id').val(recebeID);
+        modal.find('#recebe-total').val(recebeTotal);
+
+        $("#myModalPROD").modal('hide');
+      })
+    </script>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>

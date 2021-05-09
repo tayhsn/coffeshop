@@ -16,7 +16,7 @@
       return $stmt;
     }
 
-    public function listAll($cliente, $func, $produto, $qtd, $data, $total) {
+    public function listAllVendas($cliente, $func, $produto, $qtd, $data, $total) {
       try {
         $sql = " SELECT cliente, func, produto, qtd, data, total
                  FROM venda ";
@@ -37,6 +37,24 @@
         $this -> conn = null;
       }
     }
+
+    public function showTotal($total) {
+      try {
+        $sql = " SELECT total
+                 FROM venda ";
+        $stmt = $this -> conn -> prepare($sql);
+        $stmt -> bindParam(":total", $total);
+
+        $stmt -> execute(); 
+        return $stmt;
+
+      } catch(PDOException $e) {
+        echo("Error: ".$e -> getMessage());
+      } finally {
+        $this -> conn = null;
+      }
+    }
+
 
     public function redirect($url){
       header("location: $url");
