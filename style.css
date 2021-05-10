@@ -57,28 +57,21 @@ main img {
 }
 
 .bebidas .infos {
-  width: 100%;
+  width: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .bebidas .infos select {
-  width: fit-content;
+  width: min-content;
   margin: 5px;
 }
 
-.carrinho {
-  border: #13261f 2px solid;
-  width: 100%;
-  padding: 15px;
-  margin: 5px;
-}
-
-.carrinho p {
-  width: 100%;
-  align-items: center;
-  margin: 10px;
+.bebidas .qtd {
+  width: 65%;
+  margin: 5px 40px;
+  text-align: center;
 }
 /* SECTION PAGINA INICIAL */
 
