@@ -1,4 +1,5 @@
 <?php 
+
   require_once 'model/venda.php';
   $objVenda = new Venda();
 ?>
@@ -106,67 +107,64 @@
             <!-- Modal body -->
             <div class="modal-body">
               <forms action="control/ctr-venda.php" method="POST">
-                    <input type="hidden" name="getTotal">
+                    <input type="hidden" name="insert">
                     <div class="bebidas cafe-preto">
                         <img src="./images/localpic/cafe-preto.jpg" alt="Café Preto">
                       <div class="infos">
+                          <input type="hidden" name="txtID">
                           <strong>Cafézin Preto</strong>
                           <select class="form-select">
-                            <option>Tamanho:</option>
-                            <option value="P">200ml</option>
-                            <option value="M">300ml</option>
-                            <option value="G">500ml</option>
+                            <option>Tamanho</option>
+                            <option name="txt200">200ml</option>
+                            <option name="txt300">300ml</option>
+                            <option name="txt500">500ml</option>
                           </select>
-                          <select class="form-select">
-                            <option>Quantidade:</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                          </select>
-                          <button id="submit" class="btn btn-dark">Escolher</button>
+                          <div>
+                             <input class="qtd" type="number" class="form-control" placeholder="Quantidade" name="txtQtd" required>
+                          </div>
+                          <button id="submit" class="btn btn-dark"
+                                  
+                                  >Escolher</button>
                       </div>
                     </div>
                     <div class="bebidas cafe-expresso">
                        <img src="./images/localpic/cafe-expresso.jpg" alt="Café Preto">
                       <div class="infos">
+                          <input type="hidden" name="txtID">
                           <strong>Cafézin Expresso</strong>
                           <select class="form-select">
-                            <option>Tamanho:</option>
+                            <option>Tamanho</option>
                             <option value="P">200ml</option>
                             <option value="M">300ml</option>
                             <option value="G">500ml</option>
                           </select>
-                          <select class="form-select">
-                            <option>Quantidade:</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                          </select>
+                          <div>
+                             <input class="qtd" type="number" class="form-control" placeholder="Quantidade" name="txtQtd" required>
+                          </div>
                           <button id="submit" class="btn btn-dark">Escolher</button>
                       </div>
                     </div>
                     <div class="bebidas cappucino">
                           <img src="./images/localpic/cappucino.jpg" alt="Café Preto">
                         <div class="infos">
+                            <input type="hidden" name="txtID">
                             <strong>Cafézin Gourmet</strong>
                             <select class="form-select">
-                              <option>Tamanho:</option>
+                              <option>Tamanho</option>
                               <option value="P">200ml</option>
                               <option value="M">300ml</option>
                               <option value="G">500ml</option>
                             </select>
-                            <select class="form-select">
-                              <option>Quantidade:</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                            </select>
+                            <div>
+                             <input class="qtd" type="number" class="form-control" placeholder="Quantidade" name="txtQtd" required>
+                            </div>
                             <button id="submit" class="btn btn-dark">Escolher</button>
                         </div>
                     </div>
               <div>
                 <button id="submit" class="btn btn-success" 
                         data-toggle="modal" data-target="#myModalCLIENTE" data-dismiss="modal"
+                        
                         > FINALIZAR PEDIDO </button>
               </div>
 
@@ -314,7 +312,8 @@
         $("#myModalPROD").modal('hide');
       })
     </script>
-   
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -78,15 +78,15 @@
                   $stmt -> execute();
                   while($objVenda = $stmt -> fetch(PDO::FETCH_ASSOC)) {
                 ?>
-                  <tr>
-                    <td> <?php echo($objVenda['id']) ?> </td>
-                    <td> <?php echo($objVenda['cliente']) ?> </td>
-                    <td> <?php echo($objVenda['func']) ?> </td>
-                    <td> <?php echo($objVenda['produto']) ?> </td>
-                    <td> <?php echo($objVenda['qtd']) ?> </td>
-                    <td> <?php echo($objVenda['data']) ?> </td>
-                    <td> <?php echo($objVenda['total']) ?> </td>
-                  </tr>
+                      <tr>
+                        <td> <?php echo($objVenda['id']) ?> </td>
+                        <td> <?php echo($objVenda['cliente']) ?> </td>
+                        <td> <?php echo($objVenda['func']) ?> </td>
+                        <td> <?php echo($objVenda['produto']) ?> </td>
+                        <td> <?php echo($objVenda['qtd']) ?> </td>
+                        <td> <?php echo($objVenda['data']) ?> </td>
+                        <td> <?php echo($objVenda['total']) ?> </td>
+                      </tr>
                 <?php } ?>
 
             </tbody>

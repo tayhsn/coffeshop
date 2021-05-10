@@ -11,15 +11,6 @@
     }
   }
 
-  if(isset($_POST['getTotal'])){
-    $qtd = $_POST['txtQtd'];
-    $produto = $_POST['txtProduto'];
-    $total = $_POST['txtTotal'];
-    $id = $_POST['txtID'];
-      
-    // if($objVenda -> getTotal($total, $id)) {
-    //   $objVenda -> redirect(('../index.php'));
-    // }
-  }
+
 
 ?>
