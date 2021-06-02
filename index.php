@@ -1,9 +1,23 @@
+<<<<<<< HEAD
 <?php 
 
   require_once 'model/venda.php';
   $objVenda = new Venda();
 ?>
 
+=======
+<?php
+  @session_start();
+  require_once 'model/cliente.php';
+  $objcli = new cliente();
+  if(@$_SESSION['validar'] == true){
+    $objcli  -> redirect('cliente.php');
+  }
+
+?>
+
+
+>>>>>>> 214f381567d4fe15aa0b4b7421c98463df193c82
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,9 +67,98 @@
             <li class="nav-item">
               <a class="nav-link" href="" data-toggle="modal" data-target="#myModalADM">ADM</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" data-toggle="modal" data-target="#myModalLogin">Login</a>
+            </li>
           </ul>
         </div>
       </nav>
+
+<!-- The Login Modal -->
+<div class="modal fade" id="myModalLogin">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Login</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form action="control/ctr-cliente.php" method="POST">
+                <input type="hidden" name="validar">
+                <div class="d-flex flex-column p-2 bd-highlight justify-content-around align-items-center" >
+                    <div>
+                        <img src="images/logos/logotipo.png" alt="logo Cafézin" class="logocli">
+                    </div> <br>
+                    <div class="form-floating mb-3 d-flex">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Login" name="txtLogin">
+                        <label for="floatingInput">Login</label>
+                    </div>
+                    <div class="form-floating d-flex">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" name="txtSenha">
+                      <label for="floatingPassword">Senha</label>
+                    </div> <br>
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                </div>
+              </form>
+              <button class="btn btn-dark" class="close" data-dismiss="modal" class="nav-link" href="" data-toggle="modal" data-target="#myModalCreat">Criar conta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+             <!-- The Criar Conta Modal -->
+             <div class="modal" id="myModalCreat">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Criar Conta</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form action="control/ctr-cliente.php" method="POST">
+                    <input type="hidden" name="insert">
+                    <div class="form-group">
+                      <label for="">Nome:</label>
+                      <input type="text" class="form-control" name="txtNome" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Idade:</label>
+                      <input type="text" class="form-control" name="txtidade" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Sexo:</label>
+                      <input type="text" class="form-control" name="sexo" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="">dataNascimento:</label>
+                      <input type="text" class="form-control" name="txtdataNascimento" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="">CPF:</label>
+                      <input type="text" class="form-control" name="txtCPF" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Login:</label>
+                      <input type="text" class="form-control" name="txtLogin" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Senha:</label>
+                      <input type="password" class="form-control" name="txtSenha" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- The ADM Modal -->
       <div class="modal fade" id="myModalADM">
@@ -77,11 +180,11 @@
                         <img src="images/logos/logotipo.png" alt="logo Cafézin" class="logoADM">
                     </div> <br>
                     <div class="form-floating mb-3 d-flex">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Login" name="txtLogin">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="login" name="txtlogin">
                         <label for="floatingInput">Login</label>
                     </div>
                     <div class="form-floating d-flex">
-                      <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" name="txtSenha">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="senha" name="txtsenha">
                       <label for="floatingPassword">Senha</label>
                     </div> <br>
                     <button type="submit" class="btn btn-dark">Enviar</button>

@@ -1,4 +1,5 @@
 <?php
+@session_start();
   class dataBase{
     private $userName = "root";
     private $senha = "";

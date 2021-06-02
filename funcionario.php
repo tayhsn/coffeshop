@@ -134,16 +134,15 @@
                     </div>
                     <div class="form-group">
                       <label for="">Login:</label>
-                      <input type="text" class="form-control" name="txtLogin" required>
+                      <input type="text" class="form-control" name="txtlogin" required>
                     </div>
                     <div class="form-group">
                       <label for="">Senha:</label>
-                      <input type="password" class="form-control" name="txtSenha" required>
+                      <input type="password" class="form-control" name="txtsenha" required>
                     </div>
                     <button type="submit" class="btn btn-success">Enviar</button>
               </form>
             </div>
-
           </div>
         </div>
       </div>
@@ -200,7 +199,7 @@
                     </div>
                     <div class="form-group">
                       <label for="">Login:</label>
-                      <input type="text" class="form-control" name="txtLogin" id="recebe-login">
+                      <input type="text" class="form-control" name="txtlogin" id="recebe-login">
                     </div>
                     <div class="form-group">
                       <label for="">Senha:</label>
