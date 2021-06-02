@@ -8,17 +8,6 @@
         <strong>Cafézin</strong> é uma cafeteria fictícia, tema de um site desenvolvido com <strong>Frontend { HTML, CSS, BOOTSTRAP }, Backend { PHP }, e integração ao banco de dados { mySQL }</strong> submetido para avaliação no Projeto Final de Programação WEB do curso Desenvolvimento de Sistemas @ SENAI/BA.
     </h4>
     <h4>
-        ✔ Nota das avaliações:
-        <ul>
-            <li>
-                Frontend: <strong> 4/4 </strong>
-            </li>
-            <li>
-                Backend: <strong> em produção </strong>
-            </li>
-        </ul>
-    </h4>
-    <h4>
         :octocat: Desenvolvedores:
     <ul>
         <li>
